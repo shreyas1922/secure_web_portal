@@ -1,0 +1,16 @@
+.main_body{
+  display: flex;
+  height: calc(100% - 70px);
+}
+ 
+.main-content {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 20px; */
+  height: calc(100% - 30px);
+  overflow-y: auto;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+ 
+ 
+}

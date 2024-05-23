@@ -1,0 +1,30 @@
+.tableOutline{
+ 
+    width: 100%;
+    padding: 15px
+    /* padding-left: auto; */
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.heading button{
+    height: 50px;
+    background-color: #81b0f5;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.heading button a {
+    text-decoration: none;
+    color: inherit; /* Ensure the link text color matches the button text color */
+    display: block; /* Ensures the link fills the button area */
+    height: 100%; /* Ensures the link height matches the button height */
+    width: 100%; /* Ensures the link width matches the button width */
+    line-height: 50px; /* Centers the link text vertically */
+}
