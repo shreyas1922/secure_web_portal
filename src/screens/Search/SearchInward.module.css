@@ -1,8 +1,14 @@
 
+.formFather{
+ display: flex;
+ justify-content: center;
+}
+
+
 .SearchInwardMain{
     width: 100%;
     padding-inline: 20px;
-    margin-top: 20%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -12,14 +18,12 @@
     border-radius: 10px
 }
 
-.headingFather
-{   
+.headingFather{   
     width: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
     background-color: transparent;
-    height: 70px;
-    width: 200px;
 }
 .heading{
 

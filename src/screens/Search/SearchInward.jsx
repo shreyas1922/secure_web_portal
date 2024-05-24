@@ -34,10 +34,11 @@ const SearchInward = () => {
         console.log('In dropdown', e.target.value);
     }
     return <>
+        <div className={classes.formFather}>
         <form>
             <div className={classes.SearchInwardMain}>
                 <h3>Search By   </h3>
-                <div className={classes.subHeading}>
+                <div className={classes.headingFather}>
                     {/* <Button
                     id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -80,7 +81,7 @@ const SearchInward = () => {
                             <option value='Product Name'>Product Name</option>
                             <option value='Customer Name'>Customer Name</option>
                         </select>
-                        <input></input>
+                        <input ></input>
                         <button>Search</button>
 
                     </div>
@@ -89,6 +90,7 @@ const SearchInward = () => {
                 </div>
             </div>
         </form>
+        </div>
 
 
 
