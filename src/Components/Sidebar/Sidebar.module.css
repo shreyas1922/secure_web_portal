@@ -38,6 +38,12 @@
     color: white;
     cursor: pointer;
 }
+
+.inwardListChild{
+
+    display: flex;
+    
+}
  
 /* .sidebar:hover {
     width: 17%;
