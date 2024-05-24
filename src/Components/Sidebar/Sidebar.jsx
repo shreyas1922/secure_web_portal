@@ -9,6 +9,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 
 import Menu from '@mui/material/Menu';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Sidebar = () => {
     const [sidebarClosed, setSidebarclosed] = useState(false);
@@ -56,7 +57,7 @@ const Sidebar = () => {
 
 
     return <>
-            <div className={classes.sidebar} style={{ width: sidebarClosed ? '45px' : '15%' }}>
+            <div className={classes.sidebar} style={{ width: sidebarClosed ? '40px' : '16%' }}>
                 <div
                     onClick={() => setSidebarclosed(prev => !prev)}
                     className={classes.sidebarMenuIcon}
@@ -74,6 +75,7 @@ const Sidebar = () => {
                             aria-expanded={open ? 'true' : undefined}
                             onClick={handleClick}
                             sx={{color:'white' , padding:'0px'}}
+                            endIcon={<KeyboardArrowDownIcon />}
                         >
                             {nameSelect}
                         </Button>
