@@ -76,3 +76,8 @@
 .heading button:hover{
     background-color: rgb(29, 80, 6);
 }
+
+.tableOutline{
+    margin: 10px;
+
+}

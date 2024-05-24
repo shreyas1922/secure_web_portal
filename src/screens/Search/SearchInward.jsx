@@ -5,7 +5,78 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import CustomTable from '../../Components/table/CustomTable';
 
+
+
+
+const columns1 = [
+    {
+      label: "Proposal Number",
+      id: "proposalNumber",
+    },
+    {
+      label: "Policy No",
+      id: "policyNo",
+    },
+    {
+      label: "Quote No",
+      id: "quoteNo",
+    },
+    {
+      label: "Customer Name",
+      id: "customerName",
+    },
+    {
+      label: "Product Name",
+      id: "productName",
+    },
+    {
+      label: "Premium Amount",
+      id: "premiumAmount",
+    },
+    {
+      label: "Submitted Date",
+      id: "submittedDate",
+    },
+    {
+      label: "Ops Received Date",
+      id: "opsReceivedDate",
+    },
+    {
+      label: "Proposal Signed Date",
+      id: "proposalSignedDate",
+    },
+    // {
+    //   label: "Co Insurance",
+    //   id: "coInsurance",
+    // },
+    // {
+    //   label: "PPHC",
+    //   id: "pphc",
+    // },
+    // {
+    //   label: "Agreement Code",
+    //   id: "agreementCode",
+    // },
+  ];
+
+  const data1 = [
+    {
+        proposalNumber: "5926864",
+        policyNo: "0000000000369583",
+        quoteNo: "0000000009172689",
+        customerName: "Pravat Sharma",
+        productName: "Motor",
+        premiumAmount: 234566,
+        submittedDate: "1/1/2024",
+        opsReceivedDate: "1/2/2024",
+        proposalSignedDate: "1/2/2024",
+        // coInsurance: "N",
+        // pphc: "N",
+        // agreementCode: 127146,
+      },
+  ];
 
 
 
@@ -28,6 +99,11 @@ const SearchInward = () => {
 
     // };
     const [dropDown1, setDropDown1] = useState('Select Method')
+    const [showTable , setShowTable] = useState(false);
+    const [page, setPage] = useState(0);
+    const handleSearch = () => {
+        setShowTable(true);
+    }
 
     const dropDownValue = (e) => {
         setDropDown1(e.target.value);
@@ -82,7 +158,8 @@ const SearchInward = () => {
                             <option value='Customer Name'>Customer Name</option>
                         </select>
                         <input ></input>
-                        <button>Search</button>
+                        <button type='button' onClick={handleSearch}>Search</button>
+
 
                     </div>
 
@@ -90,6 +167,10 @@ const SearchInward = () => {
                 </div>
             </div>
         </form>
+        </div>
+        <div className={classes.tableOutline}>
+
+        {showTable && <CustomTable page={page} setPage={setPage}   columns={columns1} data={data1}/>}
         </div>
 
 
