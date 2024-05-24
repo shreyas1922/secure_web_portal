@@ -7,6 +7,7 @@ import Issued from "./screens/Issued/Issued";
 import DashBoard from "./screens/Dashboard/Dashboard";
 import InwardForm from "./Components/Forms/InwardForm";
 import SearchInward from "./screens/Search/SearchInward";
+import InwardForm2 from "./Components/Forms/InwardForm2";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/issued" element={<Issued />} />
             <Route path="/inwardForm" element={<InwardForm/>}></Route>
             <Route path="/searchInward" element={<SearchInward/>}></Route>
+            <Route path="/inwardForm2" element={<InwardForm2/>}></Route>
           </Routes>
         </div>
       </div>

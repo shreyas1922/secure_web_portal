@@ -4,6 +4,9 @@ import classes from "./InwardForm.module.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from '@mui/icons-material/Add';
+import Add from "@mui/icons-material/Add";
+import { NavLink } from "react-router-dom";
  
 const InwardForm = () => {
   const [count, setCount] = useState(0);
@@ -83,6 +86,10 @@ const InwardForm = () => {
  
             <label>Premium Amount</label>
             <input type="text" />
+
+            <label >Proposal Signed Date</label>
+            <input type="date" />
+
           </div>
           <div>
             <h3>Instrument Details</h3>
@@ -126,7 +133,7 @@ const InwardForm = () => {
                 aria-label="add to shopping cart"
                 onClick={addDiv}
               >
-                <AddShoppingCartIcon />
+                <Add fontSize="large" sx={{color:"black"}}/>
               </IconButton>
             </div>
           </div>
@@ -173,8 +180,8 @@ const InwardForm = () => {
             ))}
           </div>
  
-          <div className={classes.form_div4}>
-                <div className={classes.form_div5}>
+          <div className={classes.buttonDiv}>
+                {/* <div className={classes.form_div5}>
                     <label >Proposal Signed Date</label>
                     <input type="date" />
                 </div>
@@ -190,7 +197,10 @@ const InwardForm = () => {
                 <div className={classes.form_div5}>
                     <label >Date of Birth</label>
                     <input type="date" />
-                </div>
+                </div> */}
+                <button type="button" className={classes.nextBtn}>
+                  <NavLink to='/inwardForm2'>Next</NavLink>
+                </button>
             </div>
         </form>
       </div>
